@@ -5,14 +5,14 @@ const initialState = {
 };
 
 export const reducer = (state = initialState, action) => {
-  if (action.type === INCREMENT) {
-    return { count: state.count + 1 };
+  switch (action.type) {
+    case INCREMENT:
+      return { count: state.count + 1 };
+    case DECREMENT:
+      return { count: state.count + 1 };
+    case SET:
+      return { count: action.payload };
+    default:
+      return state;
   }
-  if (action.type === DECREMENT) {
-    return { count: state.count - 1 };
-  }
-  if (action.type === SET) {
-    return { count: action.payload };
-  }
-  return state;
 };
