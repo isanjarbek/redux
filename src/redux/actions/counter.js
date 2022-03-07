@@ -1,6 +1,4 @@
-export const INCREMENT = "INCREMENT";
-export const DECREMENT = "DECREMENT";
-export const SET = "SET";
+import { DECREMENT, INCREMENT, SET } from "../constants/counter";
 
 export const increment = () => ({
   type: INCREMENT,

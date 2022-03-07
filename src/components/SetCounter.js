@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { set } from "../redux/actions";
+import { set } from "../redux/actions/counter";
 
 const SetCounter = () => {
   const dispatch = useDispatch();
-  const countFormStore = useSelector((state) => state.count);
+  const { value: countFormStore } = useSelector((state) => state.counter);
 
   const [count, setCount] = useState(countFormStore);
 
